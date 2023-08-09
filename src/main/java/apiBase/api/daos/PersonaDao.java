@@ -10,7 +10,7 @@ import apiBase.api.entities.Persona;
 @Repository
 public interface PersonaDao extends JpaRepository<Persona, Long>{
 
-    @Query("SELECT persona Persona persona WHERE id = :id")
+    @Query("SELECT persona FROM Persona persona WHERE id = :id")
     public Persona getById(@PathVariable Long id);
 
 }

@@ -8,7 +8,7 @@ import apiBase.api.entities.Carrera;
 
 public interface CarreraDAO extends JpaRepository<Carrera , Long> {
 	
-	@Query("SELECT carrera Carrera carrera where id_carrera = :id")
+	@Query("SELECT carrera FROM Carrera carrera where id_carrera = :id")
 	public Carrera getById(@PathVariable long id);
 
 }
